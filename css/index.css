@@ -408,12 +408,12 @@ footer p {
         margin: 2% 0;
     }
 
-    /* Top-content */
+    /* Top-Content */
     #features {
         margin-right: 3%;
     }
 
-    /* More-content */
+    /* More-Content */
    #services {
         margin-right: 5%;
     }
@@ -428,7 +428,9 @@ footer p {
     }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
+    /* --- Index CSS --- */
+    /*  Nav  */
     nav {
         flex-direction: column;
     }
@@ -442,5 +444,43 @@ footer p {
 
     nav a:last-child {
         border-bottom: 1px solid;
+    }
+
+    .img {
+        width: 32%;
+    }
+
+    /*  Lines  */
+    .line hr{
+        margin: 0% 0 15%;
+    }
+
+    /*  Top-Content  */
+    .top-content {
+        flex-direction: column;
+    }
+
+    .top-content div {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    /*  More-Content  */
+    .more-content {
+        flex-direction: column;
+    }
+
+    .more-content div {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    #vision {
+        margin: 0 0 2%;
+    }
+       
+    /*  Contact  */
+    #contact {
+        margin: -5% 0 0;
     }
 }

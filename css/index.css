@@ -1,3 +1,352 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+	
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/*----------------- UNIVERSAL ----------------------*/
+/* Only used to see boxes while designing. 
+* {
+	border: 1px solid black; 
+}
+*/
+
+body {
+	margin: 0 10%;
+}
+
+h2 {
+	font-size: 125%;
+}
+
+p {
+	font-size: 115%;
+	line-height: 1.1;
+}
+
+/*----------------- NAV ----------------------*/
+/* this is for a fixed position nav bar */
+/* .navbar {
+	overflow: hidden;
+	background-color: #23d3ff;
+	position: fixed;
+	top: 0;
+	width: 82%;S
+	height: 7%;
+	border-bottom: 1px solid black;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	z-index: 1;
+	margin-left: -1%;
+} */
+
+.nav {
+	/* for the nav bar and the logo */
+	display: flex;
+	margin: 2% 0 7%;
+}
+
+nav {
+	width: 80%;
+	/* for the nav a elements individually */
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+nav a {
+	color: rgb(172, 172, 172);
+	text-decoration: none;
+	width: 20%;
+}
+
+nav a:hover {
+	color: rgb(34, 34, 34);
+}
+
+.logo {
+	width: 100%;
+}
+
+/*---------------------- HEADER ----------------------*/
+
+header {
+	width: 100%;
+	/* for both the text and the img */
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+header div {
+	width: 40%;
+}
+
+.header-text {
+	width: 70%;
+	/* for the text and the button, to get them into a column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+	text-align: center;
+	font-size: 500%;
+}
+
+.button {
+	/* to get the button to be sized and positioned correctly */
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+header button {
+	font-size: 100%;
+	border: 1px solid black;
+    width: 30%;
+    padding: 1% 0;
+    background-color: white;
+}
+
+/*---------------------- LINES ----------------------*/
+
+.line {
+	margin: 7% 0 5%;
+}
+
+.line hr{
+	color: black;
+	border: .5px solid black;
+}
+
+/*---------------------- TOP-CONTENT ----------------------*/
+
+.top-content {
+	/* put them in a row and some spacing between (so easy to do this today) */
+	display: flex;
+	justify-content: space-between;
+}
+
+.top-content div {
+	width: 49%;
+}
+
+/*---------------------- MIDDLE IMAGE ----------------------*/
+
+.middle-image img {
+	width: 100%;
+	margin: 5% 0;
+}
+
+/*---------------------- MORE-CONTENT ----------------------*/
+
+.more-content {
+	/* all three in a row and space between */
+	display: flex;
+	justify-content: space-between;
+}
+
+.more-content div {
+	width: 32%;
+}
+
+/*---------------------- CONTACT ----------------------*/
+/* no longer needed due to flex-box */
+
+/*---------------------- FOOTER ----------------------*/
+
+.index-footer p {
+	text-align: center;
+	font-size: 100%;
+	margin: 7% 0 13%;
+}
+/*---------------------- MEDIA QUERIES ----------------------*/
+
+
+@media (max-width: 800px) {
+    /* Universal */
+    body {
+        margin: 0 3%;
+    }
+
+    p {
+        font-size: 100%;
+    }
+
+     /* Lines */
+    .line hr{
+        border: 1px solid black;
+    }
+
+    /* Nav */
+    .nav {
+        flex-direction: column-reverse;
+    }
+
+    .img {
+        width: 23%;
+        margin: 2% auto 5%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    /* Header */
+    .header-img {
+        display: none;
+    }
+    .header-text {
+        width: 100%;
+        margin: 5% 0;
+    }
+    header {
+        margin: 5% 0;
+    }
+
+    header button {
+        margin: 2% 0;
+    }
+
+    /* Top-Content */
+    #features {
+        margin-right: 3%;
+    }
+
+    /* More-Content */
+   #services {
+        margin-right: 5%;
+    }
+
+    #vision {
+        margin-left: 5%;
+    }
+
+    /* Footer */
+    .index-footer p {
+        margin: 7% 0 3%;
+    }
+}
+
+@media (max-width: 500px) {
+    /* --- Index CSS --- */
+    /*  Nav  */
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 110%;
+        text-align: center;
+        border-top: 1px solid;
+        padding: 3% 0;
+    }
+
+    nav a:last-child {
+        border-bottom: 1px solid;
+    }
+
+    .img {
+        width: 32%;
+    }
+
+    /*  Lines  */
+    .line hr{
+        margin: 0% 0 15%;
+    }
+
+    /*  Top-Content  */
+    .top-content {
+        flex-direction: column;
+    }
+
+    .top-content div {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    /*  More-Content  */
+    .more-content {
+        flex-direction: column;
+    }
+
+    .more-content div {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    #vision {
+        margin: 0 0 2%;
+    }
+       
+    /*  Contact  */
+    #contact {
+        margin: -5% 0 0;
+    }
+}
